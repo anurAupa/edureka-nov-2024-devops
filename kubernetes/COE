@@ -1,0 +1,46 @@
+Docker --> Container Engine --> 2015
+
+Container Orchestration Engine --> Kubernetes, Docker Swarm
+
+K8s --> google --> 2015
+  
+2005 - 2015 --> Borg
+
+COE Features
+------------
+1. auto-scaling of pods --> hpa (horizontal pod autoscaler) (k8s object)
+2. auto-healing of pods --> rs (replica set) (k8s object)
+3. auto-load-balancing of requests across all the pods/nodes --> svc (service) (k8s object)
+4. auto-deployment without downtime --> deploy (deployment) (K8s)
+5. auto-scheduling and auto-clustering --> nodeselector, taints, tolerance (K8s)
+
+Kubernetes ~ k8s
+
+Master Node
+worker nodes --> VMs --> K8s objects get deployed in worker nodes
+
+K8s objects:
+* Pods --> have containers, 1 Pod --> 1 container
+* ReplicaSet
+* Deployment
+* Services --> to expose the pods --> 
+    loadbalancer --> load balances the traffic across multiple nodes
+    NodePort --> exposes front-end pods
+    ClusterIP --> front-end pods and backend pods communication
+
+K8s Architecture
+API Server ---> Gatekeeper
+Scheduler --> schedules K8s objects on nodes
+Controller Manager --> Overall health of the cluster
+etcd --> database --> lighweight, centralized, distributed, key-value pair DB
+
+Kubelet --> makes sure containers are runnig healthy
+kube-proxy --> core networking component in the cluster
+
+
+AWS --> EKS --> eksctl create cluster
+Azure --> AKS
+GCP --> GKE
+Oracle --> OKE
+
+  

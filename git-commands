@@ -1,0 +1,203 @@
+sudo su -
+apt update -y
+
+
+
+1  apt update -y
+    2  history
+    3  git clone https://github.com/raushan8586/edureka-demo-project.git
+    4  ls -l
+    5  cd edureka-demo-project/
+    6  ls -l
+    7  git log
+    8  cd ..
+    9  ls -l
+   10  cd edureka-demo-project/
+   11  ls -la
+   12  cd ..
+   13  ls -l
+   14  mkdir project1
+   15  cd project1/
+   16  ls -la
+   17  pwd
+   18  ls -la
+   19  git init
+   20  ls -la
+   21  vi sample1
+   22  car sample1 
+   23  cat sample1 
+   24  ls -l
+   25  pwd
+   26  git status
+   27  git log
+   28  git add sample1 
+   29  git status
+   30  git commit -m "1st-commit"
+   31  git status
+   32  git log
+   33  git config --global user.email "raushan8586.kumar@gmail.com"
+   34  git config --global user.name "Raushan Kumar"
+   35  vi sample2
+   36  cat sample2 
+   37  git add .
+   38  git commit -m "2nd-commit"
+   39  git log
+   40  cd ..
+   41  ls -l
+   42  cd edureka-demo-project/
+   43  git status
+   44  cd ../project1/
+   45  ls -l
+   46  cd ../edureka-demo-project/
+   47  git remote -v
+   48  cd ../project1/
+   49  git remote -v
+   50  git remote add origin https://github.com/raushan8586/edureka-demo-project.git
+   51  git remote -v
+   52  git status
+   53  git push origin master
+   54  git branch
+   55  git pull origin master
+   56  git branch b1 master
+   57  git branch
+   58  git checkout b1
+   59  git log
+   60  git branch
+   61  vi feature1
+   62  cat feature1 
+   63  git add .
+   64  git commit -m "b1-1st-commit"
+   65  git log
+   66  git push origin b1
+   67  git version
+   68  pwd
+   69  ls -l
+   70  git status
+   71  git checkout master
+   72  git pull origin master
+   73  ls -l
+   74  cd ..
+   75  mkdir project2
+   76  cd project2
+   77  git init
+   78  git status
+
+36  git clone https://github.com/raushan8586/edureka-demo-project.git
+   37  ls -l
+   38  cd edureka-demo-project/
+   39  ls -la
+   40  git status
+   41  git branch
+   42  git checkout master
+   43  git status
+   44  git log --oneline
+   45  git log
+   46  ls -l
+   47  vi sample3
+   48  git checkout b1
+   49  ls -l
+   50  git log --oneline
+   51  git remote -v
+   52  git status
+   53  git checkout master
+   54  git status
+   55  ls -l
+   56  git add .
+   57  git commit -m "sample3-file-created"
+   58  git push origin master
+   59  git log --oneline
+   60  git checkout -b b2 master
+   61  git branch
+   62  git checkout master
+   63  git pull origin master
+   64  ls -l
+   65  git log --oneline
+   66  git checkout b2
+   67  git rebase master
+   68  git log --oneline
+   69  vi feature-b2
+   70  ls -l
+   71  git add .
+   72  git commit -m "b3-first-commit"
+   73  git push origin b2
+   74  ls -l
+   75  git status
+   76  vi app1.log
+   77  vi ReadMe
+   78  ls -l
+   79  git status
+   80  vi sample4
+   81  git status
+   82  git add sample4
+   83  git status
+   84  vi .gitignore
+   85  git status
+   86  cat .gitignore 
+   87  git status
+   88  git add .
+   89  git status
+   90  git commit -m "sampple4&gitignore-added"
+   91  git status
+   92  vi ReadMe 
+   93  git status
+   94  ls -l
+   95  vi sample5
+   96  git add .
+   97  git commit "sample5-added"
+   98  git commit -m "sample5-added"
+   99  git log --oneline
+  100  ls -l
+  101  rm sample5
+  102  ls -l
+  103  git ls-files
+  104  git status
+  105  git restore sample5
+  106  ls -l
+  107  git status
+  108  git rm sample5
+  109  ls -l
+  110  git ls-files
+  111  git status
+  112  git restore --staged sample5
+  113  git ls-files
+  114  ls -l
+  115  git status
+  116  git restore sample5
+  117  ls -l
+  118  git status
+  119  git log --oneline
+  120  git show 60f9af7
+  121  git revert 60f9af7
+  122  git log --oneline
+  123  git show 7dc0839
+  124  git log --oneline
+  125  git reset --hard 775fbc2
+  126  git log --oneline
+  127  git status
+
+----
+ git stash list --> list all the stash IDs
+    8  git stash  --> move unstaged changes to the temp shell
+    9  git stash list
+   10  git log --oneline
+   11  git show stash@{0} --> describe the stash id
+   12  git status
+   13  git stash pop stash@{0} --> unstash and delete the stash id from the tem shell. ("apply" --> does not delete form the tem shell)
+   14  git status
+   15  git stash list
+   16  git stash -p --> used for partial stashing
+   17  git stash list
+   18  git show stash@{0}
+   19  git status
+   20  git stash drop stash@{0} --> delete the stash id
+   21  git stash list
+   22  git stash
+   23  git stash list
+   24  git stash drop stash@{0}
+   25  vi file4.java 
+   26  git stash
+   27  vi file5.java 
+   28  git stash
+   29  git stash list
+   30  git stash clear
+   31  git stash list

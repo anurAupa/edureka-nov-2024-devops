@@ -1,0 +1,39 @@
+Installation
+
+apt update -y
+    2  clear
+    3  apt install fontconfig openjdk-17-jre -y
+    4  java -version
+    5  clear
+    6  wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+    7  ls -l
+    8  echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+    9  apt update -y
+   10  apt install jenkins -y
+   11  lsof -i -P -n | grep LISTEN
+   12  cat /var/lib/jenkins/secrets/initialAdminPassword
+   13  clear
+
+gitHub Repo: https://github.com/raushan8586/pipeline1.git
+
+
+   14  cd /var/lib/jenkins/workspace/gitHub-job
+
+Docker-Jobs
+sudo docker build /home/ubuntu/workspace/gitHub-job/ -t httpd1
+
+sudo docker rm -f $(sudo docker ps -a -q)
+sudo docker run -itd -p 82:80 httpd1
+
+If you need to run commands/scripts as root user-->
+jenkins ALL=(ALL) NOPASSWD: ALL    --> Add this line to sudoers file 
+
+
+jenkinsfile
+https://www.jenkins.io/doc/book/pipeline/getting-started/
+https://www.jenkins.io/doc/book/pipeline/syntax/
+
+jenkinsfile samples
+https://devopspilot.com/jenkins/pipelines/40-jenkinsfile-to-build-maven-project-and-deploy-to-tomcat/
+https://devopspilot.com/jenkins/pipelines/50-jenkinsfile-to-build-docker-image-push-deploy-to-same-server/
+

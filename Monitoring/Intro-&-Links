@@ -1,0 +1,43 @@
+continuous monitoring --> why?
+
+1. Server Health --> uptime, CPU, Memory, Disk
+2. Performance --> Response time, Status code, Errors
+3. Troubleshoot applications
+4. Alerts
+
+
+Role of DevOps / SRE Engineer -->
+
+1. Proof of concept (POC)
+2. Setup/install monitoring tool
+3. Create Dashboards for metrics --> uptime, CPU, Memory, Disk, Response time, Status code, Errors,..
+4. setup Alerts and acting on alerts and SOPs (Standard Operating Procedures)
+
+--> Prometheus & Grafana
+
+General Architecture of Monitoring tool -->
+
+* Database to store metrics
+* Agents on the datasources
+* Visualization tool
+
+Prometheus --> DB
+Grafana --> Visualization tool
+Exporters ---> agent 
+
+Prometheus --> time-series DB
+influxDB
+
+
+https://prometheus.io/docs/introduction/overview/
+https://prometheus.io/docs/instrumenting/clientlibs/
+https://prometheus.io/docs/instrumenting/exporters/
+
+Installation:
+https://prometheus.io/download/
+
+Grafana Dashboard --> https://grafana.com/grafana/dashboards/1860-node-exporter-full/
+
+Alerting
+https://grafana.com/docs/grafana/latest/alerting/#alerting
+

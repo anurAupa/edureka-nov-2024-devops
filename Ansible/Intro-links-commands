@@ -1,0 +1,140 @@
+Ansible --> Configuration Management Tool (CMT)
+
+Application is a runnig 
+  in a VM --> AMI
+  as a container --> Container image
+
+For the changes required in a VM
+--> security patches
+--> updating java versions
+
+Before Ansible -->
+chef
+Puppet
+
+Ansible is agentless
+
+Installation:
+1  apt update -y
+    2  python3 --version
+    3  sudo apt install software-properties-common
+    4  sudo add-apt-repository --yes --update ppa:ansible/ansible
+    5  apt install ansible -y
+    6  ansible --version
+
+Links
+https://docs.ansible.com/ansible/2.8/modules/list_of_all_modules.html
+
+
+hosts file --> dev is the group
+[dev]
+host1 ansible_ssh_host=65.2.6.86
+host2 ansible_ssh_host=43.204.236.8
+
+
+Adhoc Commands --> simple tasks across multiple hosts
+
+  ansible -m ping host1
+  ansible -m ping dev
+
+  ansible -m shell -a "free -h" host1
+  ansible -m shell -a "free -h" dev
+
+
+Ansible Playbook --> complex tasks across different hosts
+
+  ansible-playbook first-playbook.yaml --syntax-check
+  ansible-playbook first-playbook.yaml
+
+
+Ansible Roles --> complex tasks with multiple playbooks
+  Framework --> strauctured way of automating tasks
+            --> playbooks, variable, files, notifiers and handlers
+
+ansible-galaxy init app1
+
+https://github.com/raushan8586/ansible/tree/ansible-role
+
+
+Commands to refer -->
+
+become root user -->
+sudo su -  
+apt update -y
+    2  clear
+    3  cd ~
+    4  pwd
+    5  cd .ssh
+    6  cd ..
+    7  ls -la
+    8  ls -l
+    9  ls -la
+   10  cd .ssh
+   11  ls -l
+   12  cat authorized_keys
+   13  pwd
+   14  cd ..
+   15  ls -l
+
+create a key in ansible control machine--> 
+
+   16  ssh-keygen
+   17  cd .ssh
+   18  ls -l
+   19  cat id_ed25519.pub
+   20  cd ..
+   21  clear
+
+Ansible installation -->
+
+   22  python3 --version
+   23  apt install software-properties-common
+   24  add-apt-repository --yes --update ppa:ansible/ansible
+   25  apt install ansible -y
+   26  ansible --version
+   27  cd /etc/ansible/
+
+
+   28  pwd
+   29  ls -l
+   30  clear
+   31  pwd
+   32  ls -l
+   33  vi hosts
+   34  free -h
+
+Adhoc commends --> 
+
+   35  ansible -m ping host1
+   36  ansible -m ping host2
+   37  ansible -m ping dev
+   38  cd ~
+   39  cd .ssh
+   40  ls -l
+   41  cat id_ed25519.pub
+   42  cd /etc/ansible/
+   43  ls -l
+   44  ansible -m ping dev
+
+   46  ansible -m shell -a "free -h" dev
+   47  ansible -m shell -a "df -h" dev
+   48  ansible -m shell -a "uptime" dev
+
+   50  ansible -m shell -a "uptime" dev > uptime.txt
+   51  ls -l
+   52  cat uptime.txt
+   53  ansible -m shell -a "df -h" dev > disk.txt
+   54  ls -l
+   55  cat disk.txt
+
+60  vi first-playbook.yaml
+   61  ansible-playbook first-playbook.yaml --syntax-check
+   62  ansible-playbook first-playbook.yaml
+
+
+
+
+
+
+
+
